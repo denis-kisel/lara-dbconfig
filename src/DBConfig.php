@@ -14,7 +14,7 @@ class DBConfig
 
     public static function get($key, $default = null)
     {
-        return SettingsModel::whereKey($key)->first()->value ?? $default;
+        return SettingsModel::where('key', '=', $key)->first()->value ?? $default;
     }
 
     public static function has($key)
@@ -24,6 +24,20 @@ class DBConfig
 
     public static function forget($key)
     {
-        SettingsModel::whereKey($key)->delete();
+        SettingsModel::where('key', '=', $key)->delete();
+    }
+
+    public static function increment($key, $amount = 1)
+    {
+        $data = self::get($key);
+        $data = (int)$data + $amount;
+        self::put($key, $data);
+    }
+
+    public static function decrement($key, $amount = 1)
+    {
+        $data = self::get($key);
+        $data = (int)$data - $amount;
+        self::put($key, $data);
     }
 }
