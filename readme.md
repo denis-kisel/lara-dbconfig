@@ -19,6 +19,13 @@ DBConfig::has($key) # (true|false);
 
 //Forget
 DBConfig::forget($key) # remove by key;
+
+//Icrement/Decrement
+DBConfig::increment($key) # Increment +1
+DBConfig::increment($key, $amount) # Increment +$amount
+
+DBConfig::decrement($key) # Descrement -1
+DBConfig::decrement($key, $amount) # Descrement -$amount
 ```
 
 ## Installation
