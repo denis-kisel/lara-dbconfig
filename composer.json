@@ -1,0 +1,22 @@
+{
+    "name": "denis-kisel/lara-dbconfig",
+    "description": ":Extra Configs Stored in DB",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Denis Kisel",
+            "email": "denis.kisel92@gmail.com",
+            "homepage": "http://digital-elephant.com.ua"
+        }
+    ],
+    "homepage": "https://github.com/denis-kisel/lara-dbconfig",
+    "keywords": ["Laravel", "dbconfig", "settings", "global", "config"],
+    "require": {
+        "illuminate/support": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "DenisKisel\\DBConfig\\": "src/"
+        }
+    }
+}
